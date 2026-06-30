@@ -1,0 +1,63 @@
+{
+    "title": "Topology - Speed",
+    "description": "Preset for Speed in topology layer",
+    "layers": {
+        "address": {
+            "properties.@ns:com:here:mom:meta.modelVersion": {
+                "new_name": "version",
+                "checked": true
+            },
+            "properties.@ns:com:here:mom:meta.updatedByUser": {
+                "new_name": "user",
+                "checked": true
+            },
+            "properties.addressType": {
+                "new_name": "type",
+                "checked": true
+            }
+        },
+        "building": {},
+        "admin": {},
+        "carto": {},
+        "topology": {
+            "properties.averageSpeed.0.valueKph": {
+                "new_name": "avgSpeed0",
+                "checked": true
+            },
+            "properties.averageSpeed.0.appliesTo": {
+                "new_name": "direction0",
+                "checked": true
+            },
+            "properties.speedCategory.0.value": {
+                "new_name": "speedCategory0",
+                "checked": true
+            },
+            "properties.speedLimit.0.valueKph": {
+                "new_name": "speedLimit0",
+                "checked": true
+            },
+            "properties.speedLimit.0.isUnlimited": {
+                "new_name": "isUnlimited0",
+                "checked": true
+            },
+            "id": {
+                "new_name": "id",
+                "checked": true
+            },
+            "properties.speedLimit.1.valueKph": {
+                "new_name": "speedLimit1",
+                "checked": true
+            },
+            "properties.speedLimit.1.appliesTo": {
+                "new_name": "direction1",
+                "checked": true
+            },
+            "properties.speedLimit.1.isUnlimited": {
+                "new_name": "isUnlimited1",
+                "checked": true
+            }
+        },
+        "place": {},
+        "relation": {}
+    }
+}

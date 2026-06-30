@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+#
+# Copyright (c) 2026 HERE Europe B.V.
+#
+# SPDX-License-Identifier: MIT
+# License-Filename: LICENSE
+#
+-->
+
+<ui version="4.0">
+ <class>client_query_dialog</class>
+ <widget class="QDialog" name="client_query_dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>450</width>
+    <height>400</height>
+   </rect>
+  </property>
+
+  <property name="windowTitle">
+   <string>Query</string>
+  </property>
+
+  <layout class="QVBoxLayout" name="verticalLayout">
+
+   <!-- Query text -->
+   <item>
+    <widget class="QLabel" name="label_query">
+     <property name="text">
+      <string>Query</string>
+     </property>
+    </widget>
+   </item>
+
+   <item>
+    <widget class="QPlainTextEdit" name="text_query"/>
+   </item>
+
+   <!-- Build query button -->
+   <item>
+    <widget class="QPushButton" name="filter_button">
+     <property name="text">
+      <string>Build Query</string>
+     </property>
+    </widget>
+   </item>
+
+   <!-- Links -->
+   <item>
+    <widget class="QLabel" name="label_api">
+     <property name="text">
+      <string>
+       &lt;a href="https://interactive.data.api.platform.here.com/openapi/?url=/interactive/v1/static/openapi/interactive-map-api-viewer-experimental.yaml#/Read%20Features/getFeaturesByTile:~:text=Additional%20feature%20filters,the%20specification%20below"&gt;
+       Filter parameters API
+       &lt;/a&gt;
+      </string>
+     </property>
+     <property name="openExternalLinks">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+
+   <item>
+    <widget class="QLabel" name="label_docs">
+     <property name="text">
+      <string>
+       &lt;a href="https://here-technologies.atlassian.net/wiki/spaces/CMECM/pages/1271547268/QGIS+Plugin+V2+Query+IML+data+-+useful+links"&gt;
+       Useful links for query builder
+       &lt;/a&gt;
+      </string>
+     </property>
+     <property name="openExternalLinks">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+
+   <!-- Bottom buttons -->
+   <item>
+    <layout class="QHBoxLayout" name="buttonLayout">
+     <item>
+      <widget class="QPushButton" name="loadButton">
+       <property name="text">
+        <string>Load</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="cancelButton">
+       <property name="text">
+        <string>Cancel</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

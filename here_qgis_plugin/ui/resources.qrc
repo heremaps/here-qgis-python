@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/plugins/iml_map_here" >
+        <file>icons/signin_here.svg</file>
+        <file>icons/signout_here.svg</file>
+        <file>icons/basemap_here.svg</file>
+        <file>icons/imlmap.svg</file>
+        <file>icons/project_list_here.svg</file>
+        <file>icons/reload_here.svg</file>
+        <file>icons/edit_map_here.svg</file>
+        <file>icons/property_mapping.svg</file>
+        <file>icons/attribute_table.svg</file>
+    </qresource>
+</RCC>

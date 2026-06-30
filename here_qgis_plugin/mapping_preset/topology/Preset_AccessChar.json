@@ -1,0 +1,47 @@
+{
+    "title": "Topology - Access Characteristics",
+    "description": "Preset for Access Characteristics in topology layer",
+    "layers": {
+        "address": {
+            "properties.@ns:com:here:mom:meta.modelVersion": {
+                "new_name": "version",
+                "checked": true
+            },
+            "properties.@ns:com:here:mom:meta.updatedByUser": {
+                "new_name": "user",
+                "checked": true
+            },
+            "properties.addressType": {
+                "new_name": "type",
+                "checked": true
+            }
+        },
+        "building": {},
+        "admin": {},
+        "carto": {},
+        "topology": {
+            "properties.accessCharacteristics.0.bus": {
+                "new_name": "accessVehicle0",
+                "checked": true
+            },
+            "properties.accessCharacteristics.0.bicycle": {
+                "new_name": "accessBicycle0",
+                "checked": true
+            },
+            "properties.accessCharacteristics.0.appliesTo": {
+                "new_name": "accessDirections0",
+                "checked": true
+            },
+            "properties.accessCharacteristics.0.pedestrian": {
+                "new_name": "accessPedestrian0",
+                "checked": true
+            },
+            "id": {
+                "new_name": "id",
+                "checked": true
+            }
+        },
+        "place": {},
+        "relation": {}
+    }
+}

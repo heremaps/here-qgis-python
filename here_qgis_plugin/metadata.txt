@@ -1,0 +1,53 @@
+# Start of mandatory metadata
+
+[general]
+name=HERE QGIS Plugin 
+qgisMinimumVersion=3.0
+qgisMaximumVersion=4.99
+version=2.0.16
+author=HERE Europe B.V.
+email=here_qgis_plugin_dev_team@here.com
+
+description=The HERE QGIS Plugin is a modular, Python-based integration that connects QGIS with HERE MapMaking and platform services.
+about=The HERE QGIS Plugin is a modular, Python-based integration that connects QGIS with HERE MapMaking and platform services. It enables users to seamlessly visualize, explore, analyze, and edit geospatial data directly within QGIS, bridging HERE's proprietary ecosystem with a widely used open-source GIS environment.
+
+tracker=https://github.com/heremaps/here-qgis-python/issues
+repository=https://github.com/heremaps/here-qgis-python
+# End of mandatory metadata
+
+# Recommended items:
+
+hasProcessingProvider=yes
+# Uncomment the following line and add your changelog:
+# changelog=
+
+# Tags are comma separated with spaces allowed
+tags=vector,here,platform,interactive map layer,HERE,mapmaking,map editing,map tiles
+
+homepage=https://github.com/heremaps/here-qgis-python
+
+icon=ui/icons/logo.svg
+
+# experimental flag
+experimental=False
+
+# deprecated flag (applies to the whole plugin, not just a single version)
+deprecated=False
+
+# Since QGIS 3.8, a comma separated list of plugins to be installed
+# (or upgraded) can be specified.
+# Check the documentation for more information.
+# plugin_dependencies=
+
+# Category of the plugin: Raster, Vector, Database or Web
+category=Web
+
+# If the plugin can run on QGIS Server.
+server=False
+
+supportsQt6=yes
+
+changelog=Release 2.0.16 (2026-06-30)
+  - Support different realms
+  - Rename processing function display name
+  - Prepare plugin for the public OSGEO repo

@@ -1,0 +1,8 @@
+exclude = [
+    "docs",
+    "style_set_23_06_14",
+    "style_set_24_01_30"
+]
+
+[lint.per-file-ignores]
+"__init__.py" = ["F401"]

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+#
+# Copyright (c) 2024 HERE Europe B.V.
+#
+# SPDX-License-Identifier: MIT
+# License-Filename: LICENSE
+#
+-->
+
+<ui version="4.0">
+ <class>MapMakingPopup</class>
+ <widget class="QDialog" name="MapMakingPopup">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>553</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MapMaking Project Details</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="hrnLabel">
+     <property name="text">
+      <string>HRN: </string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="nameLabel">
+     <property name="text">
+      <string>Name: </string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="descriptionLabel">
+     <property name="text">
+      <string>Description: </string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTextEdit" name="descriptionText">
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="layerSelectLayout">
+     <item>
+      <widget class="QLabel" name="layerListLabel">
+       <property name="text">
+        <string>Select Layers:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="select_all_checkbox">
+       <property name="text">
+        <string>Select All</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QListWidget" name="layer_list_widget">
+     <property name="selectionMode">
+      <enum>QAbstractItemView::SingleSelection</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="style_label">
+     <property name="text">
+      <string>Select Style:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QComboBox" name="style_dropdown"/>
+   </item>
+   <item>
+    <widget class="QLabel" name="file_type">
+     <property name="text">
+      <string>Select File Type:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QComboBox" name="filetype_dropdown"/>
+   </item>
+   <item>
+    <widget class="QLabel" name="extent_label">
+     <property name="text">
+      <string>Extent (ROI):</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QgsExtentWidget" name="extent_input" native="true"/>
+   </item>
+   <item>
+    <widget class="QPushButton" name="extent_button">
+     <property name="text">
+      <string>Set Current Extent</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPlainTextEdit" name="text_query"/>
+   </item>
+   <item>
+    <widget class="QPushButton" name="filter_button">
+     <property name="text">
+      <string>Build IML query</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>&lt;a href='https://interactive.data.api.platform.here.com/openapi/?url=/interactive/v1/static/openapi/interactive-map-api-viewer-experimental.yaml#/Read%20Features/getFeaturesByTile:~:text=Additional%20feature%20filters,the%20specification%20below'&gt;Filter parameters API&lt;/a&gt;</string>
+     </property>
+     <property name="openExternalLinks">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>&lt;a href='https://here-technologies.atlassian.net/wiki/spaces/CMECM/pages/1271547268/QGIS+Plugin+V2+Query+IML+data+-+useful+links'&gt;Useful links for query builder&lt;/a&gt;</string>
+     </property>
+     <property name="openExternalLinks">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="buttonLayout">
+     <item>
+      <widget class="QPushButton" name="loadButton">
+       <property name="text">
+        <string>Load</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="cancelButton">
+       <property name="text">
+        <string>Cancel</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QgsExtentWidget</class>
+   <extends></extends>
+   <header>qgis.gui</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

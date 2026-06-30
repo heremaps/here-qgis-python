@@ -1,0 +1,11 @@
+[flake8]
+exclude =
+    docs,
+    style_set_23_06_14
+    style_set_24_01_30
+max-line-length = 88
+extend-ignore = E203, E704
+per-file-ignores =
+    __init__.py:F401
+show-source = True
+statistics = True

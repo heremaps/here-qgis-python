@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+#
+# Copyright (c) 2024 HERE Europe B.V.
+#
+# SPDX-License-Identifier: MIT
+# License-Filename: LICENSE
+#
+-->
+
+<ui version="4.0">
+ <class>PropertyListDialog</class>
+ <widget class="QDialog" name="PropertyListDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Property Mapping</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+     <!-- Config File Path and Buttons -->
+   <item>
+    <layout class="QHBoxLayout" name="configFileLayout">
+     <item>
+      <widget class="QLineEdit" name="configPathLineEdit">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+       <property name="placeholderText">
+        <string>Config file path...</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="importConfigButton">
+       <property name="text">
+        <string>Import</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="exportConfigButton">
+       <property name="text">
+        <string>Export</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+
+   <!-- layer type -->
+    <item>
+      <widget class="QLabel" name="layerTypeLabel">
+       <property name="text">
+        <string>Layer Type:</string>
+       </property>
+      </widget>
+   </item>
+   <!-- layer selection -->
+   <item>
+      <widget class="QLabel" name="layerLabel">
+       <property name="text">
+        <string>Select Layer:</string>
+       </property>
+      </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="layerLayout">
+     <item>
+      <widget class="QComboBox" name="layerDropdown" />
+     </item>
+     <item>
+      <widget class="QPushButton" name="loadButton">
+        <property name="text">
+            <string>Load</string>
+        </property>
+        <property name="maximumSize">
+            <size>
+                <width>166</width>
+                <height>25</height>
+            </size>
+        </property>
+    </widget>
+
+     </item>
+    </layout>
+    </item>
+
+   <!-- Search Bar -->
+   <item>
+    <widget class="QLineEdit" name="searchBar">
+     <property name="placeholderText">
+      <string>Search...</string>
+     </property>
+    </widget>
+   </item>
+
+   <!-- Table Widget for Items -->
+    <item>
+        <widget class="QTableWidget" name="tableWidget">
+            <property name="columnCount">
+                <number>3</number>
+            </property>
+            <property name="horizontalHeaderLabels">
+                <stringlist>
+                <string>Select</string>
+                <string>Original Key</string>
+                <string>New Key</string>
+                </stringlist>
+            </property>
+            <property name="alternatingRowColors">
+                <bool>true</bool>
+            </property>
+        </widget>
+    </item>
+
+   <!-- Buttons: Save, Preview, Cancel -->
+   <item>
+    <layout class="QHBoxLayout" name="buttonLayout">
+     <item>
+      <widget class="QPushButton" name="saveButton">
+       <property name="text">
+        <string>Save</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="previewButton">
+       <property name="text">
+        <string>Preview</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="cancelButton">
+       <property name="text">
+        <string>Cancel</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

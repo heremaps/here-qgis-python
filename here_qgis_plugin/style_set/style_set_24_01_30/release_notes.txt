@@ -1,0 +1,19 @@
+HNOs > 4 chars display fix
+
+changed address label code --> reason --> 333-2 was displayed as 333-
+from
+replace(replace(substr(houseNumbers,12,4),'&quot;',''),',','')
+to
+substr(houseNumbers,12,strpos(substr(houseNumbers,12,20),'"')-1)
+
+-----------------------------------------------------------------
+
+
+Topology fixed delivery duplicate inside topo query by replacing one with missing motorcycle
+
+-----------------------------------------------------------------
+
+
+Topology lable fix for Fastmap data, unnamed roads not dispay "dence" as name
+
+-----------------------------------------------------------------

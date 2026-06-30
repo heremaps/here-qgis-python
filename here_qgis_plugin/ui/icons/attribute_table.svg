@@ -1,0 +1,9 @@
+<!--
+Copyright (c) 2026 HERE Europe B.V.
+SPDX-License-Identifier: MIT
+License-Filename: LICENSE
+-->
+<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="30" height="30" rx="10" fill="white"/>
+<path d="M6 18H24M6 12H24M7.25 24H22.75C23.4404 24 24 23.4404 24 22.75V7.25C24 6.55964 23.4404 6 22.75 6H7.25C6.55964 6 6 6.55964 6 7.25V22.75C6 23.4404 6.55964 24 7.25 24Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

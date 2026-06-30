@@ -1,0 +1,14 @@
+<!--
+Copyright (c) 2026 HERE Europe B.V.
+SPDX-License-Identifier: MIT
+License-Filename: LICENSE
+-->
+<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20 0C25.5228 0 30 4.47715 30 10V20C30 25.5228 25.5228 30 20 30H10C4.47715 30 1.61069e-07 25.5228 0 20V10C0 4.47715 4.47715 1.61064e-07 10 0H20ZM12 5V7H23V23H12V25H23C24.1046 25 25 24.1046 25 23V7C25 5.89543 24.1046 5 23 5H12ZM12 13H5V17H12V21L19 15L12 9V13Z" fill="url(#paint0_linear_178_32)"/>
+<defs>
+<linearGradient id="paint0_linear_178_32" x1="30" y1="15" x2="0" y2="15" gradientUnits="userSpaceOnUse">
+<stop stop-color="#1BE0D7"/>
+<stop offset="1" stop-color="#3675F5"/>
+</linearGradient>
+</defs>
+</svg>

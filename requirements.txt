@@ -1,0 +1,10 @@
+amplitude-analytics
+#-r requirements_legacy.txt ; python_version < '3.12'
+#-r requirements_latest.txt ; python_version >= '3.12'
+flexpolyline==0.1.0
+geojson<=3.2.0
+geopandas
+numpy>=1.24,<2.0
+Requests==2.31.0
+requests_oauthlib
+typing_extensions

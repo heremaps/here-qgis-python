@@ -1,0 +1,54 @@
+[tool.towncrier]
+package = "here_qgis_plugin"
+name = "Release"
+#
+directory = "changelog"
+filename = "CHANGELOG.md"
+start_string = "<!-- changelog-start -->\n"
+underlines = ["", "", ""]
+issue_format = "!{issue}"
+issue_pattern = "\\d+"
+template = "changelog/towncrier_template.md"
+
+[[tool.towncrier.section]]
+name = "Module `here_qgis_plugin`"
+path = "here_qgis_plugin"
+
+[[tool.towncrier.section]]
+name = "Module `here_qgis`"
+path = "here_qgis"
+
+[[tool.towncrier.type]]
+directory = "feature"
+name = "Features"
+showcontent = true
+
+[[tool.towncrier.type]]
+directory = "bugfix"
+name = "Bugfixes"
+showcontent = true
+
+[[tool.towncrier.type]]
+directory = "doc"
+name = "Improved Documentation"
+showcontent = true
+
+[[tool.towncrier.type]]
+directory = "removal"
+name = "Deprecations and Removals"
+showcontent = true
+
+[[tool.towncrier.type]]
+directory = "refactor"
+name = "Refactoring"
+showcontent = true
+
+[[tool.towncrier.type]]
+directory = "misc"
+name = "Misc"
+showcontent = true
+
+[[tool.towncrier.type]]
+directory = "ci"
+name = "CI/CD and Tooling"
+showcontent = true

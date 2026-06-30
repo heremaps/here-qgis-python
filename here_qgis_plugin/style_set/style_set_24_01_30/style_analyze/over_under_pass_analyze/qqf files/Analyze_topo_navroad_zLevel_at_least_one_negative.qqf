@@ -1,0 +1,12 @@
+<Query>(&#xd;
+json_extract("accessCharacteristics", '$[0]."bus"') = true or&#xd;
+json_extract("accessCharacteristics", '$[0]."auto"') = true or&#xd;
+json_extract("accessCharacteristics", '$[0]."taxi"') = true or&#xd;
+json_extract("accessCharacteristics", '$[0]."truck"') = true or&#xd;
+json_extract("accessCharacteristics", '$[0]."carpool"') = true or&#xd;
+json_extract("accessCharacteristics", '$[0]."delivery"') = true or&#xd;
+json_extract("accessCharacteristics", '$[0]."motorcycle"') = true or&#xd;
+json_extract("accessCharacteristics", '$[0]."ferry"') = true&#xd;
+) and&#xd;
+replace(zLevel,' ','') like '%-%'&#xd;
+</Query>

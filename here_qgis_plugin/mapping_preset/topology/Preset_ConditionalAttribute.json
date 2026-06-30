@@ -1,0 +1,91 @@
+{
+    "title": "Topology - Conditional Attributes",
+    "description": "Preset for Conditional Attributes in topology layer",
+    "layers": {
+        "address": {
+            "properties.@ns:com:here:mom:meta.modelVersion": {
+                "new_name": "version",
+                "checked": true
+            },
+            "properties.@ns:com:here:mom:meta.updatedByUser": {
+                "new_name": "user",
+                "checked": true
+            },
+            "properties.addressType": {
+                "new_name": "type",
+                "checked": true
+            }
+        },
+        "building": {},
+        "admin": {},
+        "carto": {},
+        "topology": {
+            "id": {
+                "new_name": "id",
+                "checked": true
+            },
+            "properties.conditionalAttributes.0.appliesTo": {
+                "new_name": "direction0",
+                "checked": true
+            },
+            "properties.conditionalAttributes.0.attributes.0.constraints.0.vehicleTypes.bus": {
+                "new_name": "ConditionalToBus0",
+                "checked": true
+            },
+            "properties.conditionalAttributes.0.attributes.0.constraints.0.vehicleTypes.auto": {
+                "new_name": "ConditionalToAuto0",
+                "checked": true
+            },
+            "properties.conditionalAttributes.0.attributes.0.constraints.0.vehicleTypes.taxi": {
+                "new_name": "ConditionalToTaxi0",
+                "checked": true
+            },
+            "properties.conditionalAttributes.0.attributes.0.constraints.0.vehicleTypes.truck": {
+                "new_name": "ConditionalToTruck0",
+                "checked": true
+            },
+            "properties.conditionalAttributes.0.attributes.0.constraints.0.vehicleTypes.bicycle": {
+                "new_name": "ConditionalToBicycle0",
+                "checked": true
+            },
+            "properties.conditionalAttributes.0.attributes.0.constraints.0.vehicleTypes.motorcycle": {
+                "new_name": "ConditionalToMotorcycle0",
+                "checked": true
+            },
+            "properties.conditionalAttributes.0.attributes.0.constraints.0.vehicleTypes.pedestrian": {
+                "new_name": "ConditionalToPedestrian0",
+                "checked": true
+            },
+            "properties.conditionalAttributes.0.attributes.1.constraints.0.vehicleTypes.bus": {
+                "new_name": "ConditionalToBus1",
+                "checked": true
+            },
+            "properties.conditionalAttributes.0.attributes.1.constraints.0.vehicleTypes.auto": {
+                "new_name": "ConditionalToAuto1",
+                "checked": true
+            },
+            "properties.conditionalAttributes.0.attributes.1.constraints.0.vehicleTypes.taxi": {
+                "new_name": "ConditionalToTaxi1",
+                "checked": true
+            },
+            "properties.conditionalAttributes.0.attributes.1.constraints.0.vehicleTypes.truck": {
+                "new_name": "ConditionalToTruck1",
+                "checked": true
+            },
+            "properties.conditionalAttributes.0.attributes.1.constraints.0.vehicleTypes.bicycle": {
+                "new_name": "ConditionalToBicycle1",
+                "checked": true
+            },
+            "properties.conditionalAttributes.0.attributes.1.constraints.0.vehicleTypes.motorcycle": {
+                "new_name": "ConditionalToMotorcycle1",
+                "checked": true
+            },
+            "properties.conditionalAttributes.0.attributes.1.constraints.0.vehicleTypes.pedestrian": {
+                "new_name": "ConditionalToPedestrian1",
+                "checked": true
+            }
+        },
+        "place": {},
+        "relation": {}
+    }
+}

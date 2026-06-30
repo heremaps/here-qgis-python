@@ -1,0 +1,9 @@
+# .coveragerc to control coverage.py
+[report]
+fail_under = 80
+[run]
+omit =
+    here_qgis_plugin/style_set/style_set_23_06_14/*
+    here_qgis_plugin/style_set/style_set_24_01_30/*
+    here_qgis_plugin/processing_toolbox/iml_upload.py
+    here_qgis_plugin/processing_toolbox/iml_processing_toolbox_geojson.py

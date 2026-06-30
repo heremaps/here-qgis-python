@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+#
+# Copyright (c) 2024 HERE Europe B.V.
+#
+# SPDX-License-Identifier: MIT
+# License-Filename: LICENSE
+#
+-->
+
+<ui version="4.0">
+ <class>AttributeAllDialog</class>
+ <widget class="QDialog" name="AttributeAllDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Attributes Table</string>
+  </property>
+
+  <layout class="QVBoxLayout" name="verticalLayout">
+  <!-- layer selection -->
+   <item>
+      <widget class="QLabel" name="layerLabel">
+       <property name="text">
+        <string>Select Layer:</string>
+       </property>
+      </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="layerLayout">
+     <item>
+      <widget class="QComboBox" name="layerDropdown" />
+     </item>
+     <item>
+      <widget class="QPushButton" name="loadButton">
+        <property name="text">
+            <string>Load</string>
+        </property>
+        <property name="maximumSize">
+            <size>
+                <width>166</width>
+                <height>25</height>
+            </size>
+        </property>
+       </widget>
+
+     </item>
+    </layout>
+    </item>
+   <item>
+    <widget class="QTableWidget" name="tableWidget"/>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="buttonLayout">
+     <item>
+      <widget class="QPushButton" name="closeButton">
+       <property name="text">
+        <string>Close</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,67 @@
+{
+    "title": "Topology - Topology Characteristics",
+    "description": "Preset for Topology Characteristics in topology layer",
+    "layers": {
+        "address": {
+            "properties.@ns:com:here:mom:meta.modelVersion": {
+                "new_name": "version",
+                "checked": true
+            },
+            "properties.@ns:com:here:mom:meta.updatedByUser": {
+                "new_name": "user",
+                "checked": true
+            },
+            "properties.addressType": {
+                "new_name": "type",
+                "checked": true
+            }
+        },
+        "building": {},
+        "admin": {},
+        "carto": {},
+        "topology": {
+            "properties.topologyCharacteristics.isRamp.0.value": {
+                "new_name": "isRamp0",
+                "checked": true
+            },
+            "properties.topologyCharacteristics.isPaved.0.value": {
+                "new_name": "isPaved0",
+                "checked": true
+            },
+            "properties.topologyCharacteristics.isUrban.0.value": {
+                "new_name": "isUrban0",
+                "checked": true
+            },
+            "properties.topologyCharacteristics.isBridge.0.value": {
+                "new_name": "isBridge0",
+                "checked": true
+            },
+            "properties.topologyCharacteristics.isTunnel.0.value": {
+                "new_name": "isTunnel0",
+                "checked": true
+            },
+            "properties.topologyCharacteristics.isMotorway.0.value": {
+                "new_name": "isMotorway0",
+                "checked": true
+            },
+            "properties.topologyCharacteristics.isAdasCompliant.0.value": {
+                "new_name": "isAdasCompliant0",
+                "checked": true
+            },
+            "properties.topologyCharacteristics.isPublicAccessRoad.0.value": {
+                "new_name": "isPublicAccessRoad0",
+                "checked": true
+            },
+            "properties.topologyCharacteristics.isLimitedAccessRoad.0.value": {
+                "new_name": "isLimitedAccessRoad0",
+                "checked": true
+            },
+            "id": {
+                "new_name": "id",
+                "checked": true
+            }
+        },
+        "place": {},
+        "relation": {}
+    }
+}

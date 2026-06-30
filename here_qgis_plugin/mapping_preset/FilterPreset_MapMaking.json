@@ -1,0 +1,245 @@
+{
+    "title": "MapMaking",
+    "description": "Preset for MapMaking",
+    "layers": {
+        "address": {
+            "p.addressType": {
+                "new_name": "addressType",
+                "checked": true
+            },
+            "p.category": {
+                "new_name": "category",
+                "checked": true
+            },
+            "p.houseNumbers.0.name": {
+                "new_name": "name0",
+                "checked": true
+            },
+            "p.houseNumbers.0.nameType": {
+                "new_name": "nameType0",
+                "checked": true
+            },
+            "p.houseNumbers.0.languageCode": {
+                "new_name": "languageCode0",
+                "checked": true
+            },
+            "id": {
+                "new_name": "id",
+                "checked": true
+            }
+        },
+        "building": {
+            "p.verticalSections.0.geometry.type": {
+                "new_name": "geometryType",
+                "checked": true
+            },
+            "id": {
+                "new_name": "id",
+                "checked": true
+            }
+        },
+        "admin": {},
+        "carto": {},
+        "topology": {
+            "p.accessCharacteristics.0.bus": {
+                "new_name": "accessCharacteristicsBus",
+                "checked": true
+            },
+            "p.accessCharacteristics.0.auto": {
+                "new_name": "accessCharacteristicsAuto",
+                "checked": true
+            },
+            "p.accessCharacteristics.0.taxi": {
+                "new_name": "accessCharacteristicsTaxi",
+                "checked": true
+            },
+            "p.accessCharacteristics.0.truck": {
+                "new_name": "accessCharacteristicsTruck",
+                "checked": true
+            },
+            "p.accessCharacteristics.0.bicycle": {
+                "new_name": "accessCharacteristicsBicycle",
+                "checked": true
+            },
+            "p.accessCharacteristics.0.carpool": {
+                "new_name": "accessCharacteristicsCarpool",
+                "checked": true
+            },
+            "p.accessCharacteristics.0.delivery": {
+                "new_name": "accessCharacteristicsDelivery",
+                "checked": true
+            },
+            "p.accessCharacteristics.0.appliesTo": {
+                "new_name": "accessCharacteristicsAppliesTo",
+                "checked": true
+            },
+            "p.accessCharacteristics.0.motorcycle": {
+                "new_name": "accessCharacteristicsMotorcycle",
+                "checked": true
+            },
+            "p.accessCharacteristics.0.pedestrian": {
+                "new_name": "accessCharacteristicsPedestrian",
+                "checked": true
+            },
+            "p.accessCharacteristics.0.throughTraffic": {
+                "new_name": "accessCharacteristicsThroughTraffic",
+                "checked": true
+            },
+            "p.accessCharacteristics.0.emergencyVehicle": {
+                "new_name": "accessCharacteristicsEmergencyVehicle",
+                "checked": true
+            },
+            "p.functionalClass.0.value": {
+                "new_name": "functionalClassValue",
+                "checked": true
+            },
+            "p.isoCC.0.value": {
+                "new_name": "IsoCCValue",
+                "checked": true
+            },
+            "p.roads.0.appliesTo": {
+                "new_name": "appliesTo",
+                "checked": true
+            },
+            "p.speedCategory.0.value": {
+                "new_name": "speedCategoryValue",
+                "checked": true
+            },
+            "p.speedLimit.0.source": {
+                "new_name": "speedLimitSource",
+                "checked": true
+            },
+            "p.speedLimit.0.valueKph": {
+                "new_name": "speedLimitValue",
+                "checked": true
+            },
+            "p.speedLimit.0.appliesTo": {
+                "new_name": "speedLimitAppliesTo",
+                "checked": true
+            },
+            "p.surfaceType.0.value": {
+                "new_name": "surfaceTypeValue",
+                "checked": true
+            },
+            "p.topologyCharacteristics.isRamp.0.value": {
+                "new_name": "topologyCharacteristicsIsRamp",
+                "checked": true
+            },
+            "p.topologyCharacteristics.isPaved.0.value": {
+                "new_name": "topologyCharacteristicsIsPaved",
+                "checked": true
+            },
+            "p.topologyCharacteristics.isUrban.0.value": {
+                "new_name": "topologyCharacteristicsIsUrban",
+                "checked": true
+            },
+            "p.topologyCharacteristics.isBridge.0.value": {
+                "new_name": "topologyCharacteristicsIsBridge",
+                "checked": true
+            },
+            "p.topologyCharacteristics.isTunnel.0.value": {
+                "new_name": "topologyCharacteristicsIsTunnel",
+                "checked": true
+            },
+            "p.topologyCharacteristics.isTollway.0.value": {
+                "new_name": "topologyCharacteristicsIsTollway",
+                "checked": true
+            },
+            "p.topologyCharacteristics.isFrontage.0.value": {
+                "new_name": "topologyCharacteristicsIsFrontage",
+                "checked": true
+            },
+            "p.topologyCharacteristics.isMotorway.0.value": {
+                "new_name": "topologyCharacteristicsIsMotorway",
+                "checked": true
+            },
+            "p.topologyCharacteristics.isBoatFerry.0.value": {
+                "new_name": "topologyCharacteristicsIsBoatFerry",
+                "checked": true
+            },
+            "p.topologyCharacteristics.isRailFerry.0.value": {
+                "new_name": "topologyCharacteristicsIsRailFerry",
+                "checked": true
+            },
+            "p.topologyCharacteristics.isReversible.0.value": {
+                "new_name": "topologyCharacteristicsIsReversible",
+                "checked": true
+            },
+            "p.topologyCharacteristics.isCarpoolRoad.0.value": {
+                "new_name": "topologyCharacteristicsIsCarpoolRoad",
+                "checked": true
+            },
+            "p.topologyCharacteristics.isPrivateRoad.0.value": {
+                "new_name": "topologyCharacteristicsIsPrivateRoad",
+                "checked": true
+            },
+            "p.topologyCharacteristics.isDeliveryRoad.0.value": {
+                "new_name": "topologyCharacteristicsIsDeliveryRoad",
+                "checked": true
+            },
+            "p.topologyCharacteristics.isExpressLanes.0.value": {
+                "new_name": "topologyCharacteristicsIsExpressLanes",
+                "checked": true
+            },
+            "p.topologyCharacteristics.isParkingLotRoad.0.value": {
+                "new_name": "topologyCharacteristicsIsParkingLotRoad",
+                "checked": true
+            },
+            "p.topologyCharacteristics.isControlledAccess.0.value": {
+                "new_name": "topologyCharacteristicsIsControlledAccess",
+                "checked": true
+            },
+            "p.topologyCharacteristics.isPublicAccessRoad.0.value": {
+                "new_name": "topologyCharacteristicsIsPublicAccessRoad",
+                "checked": true
+            },
+            "p.topologyCharacteristics.isLimitedAccessRoad.0.value": {
+                "new_name": "topologyCharacteristicsIsLimitedAccessRoad",
+                "checked": true
+            },
+            "p.topologyCharacteristics.isMultiplyDigitised.0.value": {
+                "new_name": "topologyCharacteristicsIsMultiplyDigitised",
+                "checked": true
+            },
+            "p.topologyCharacteristics.isDiminishedPriority.0.value": {
+                "new_name": "topologyCharacteristicsIsDiminishedPriority",
+                "checked": true
+            },
+            "id": {
+                "new_name": "id",
+                "checked": true
+            }
+        },
+        "place": {
+            "p.primaryCategory": {
+                "new_name": "category",
+                "checked": true
+            },
+            "p.names.0.name": {
+                "new_name": "name",
+                "checked": true
+            },
+            "p.names.0.nameType": {
+                "new_name": "nameType",
+                "checked": true
+            },
+            "p.names.0.isPrimary": {
+                "new_name": "isPrimary",
+                "checked": true
+            },
+            "p.names.0.languageCode": {
+                "new_name": "languageCode",
+                "checked": true
+            },
+            "p.open24hrs": {
+                "new_name": "open24hrs",
+                "checked": true
+            },
+            "id": {
+                "new_name": "id",
+                "checked": true
+            }
+        },
+        "relation": {}
+    }
+}

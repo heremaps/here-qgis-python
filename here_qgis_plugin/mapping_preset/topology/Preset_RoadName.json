@@ -1,0 +1,67 @@
+{
+    "title": "Topology - Road Name",
+    "description": "Preset for Road Name in topology layer",
+    "layers": {
+        "address": {
+            "properties.@ns:com:here:mom:meta.modelVersion": {
+                "new_name": "version",
+                "checked": true
+            },
+            "properties.@ns:com:here:mom:meta.updatedByUser": {
+                "new_name": "user",
+                "checked": true
+            },
+            "properties.addressType": {
+                "new_name": "type",
+                "checked": true
+            }
+        },
+        "building": {},
+        "admin": {},
+        "carto": {},
+        "topology": {
+            "id": {
+                "new_name": "id",
+                "checked": true
+            },
+            "properties.roads.0.addressedNames.0.roadName.name": {
+                "new_name": "name0",
+                "checked": true
+            },
+            "properties.roads.0.addressedNames.0.roadName.nameStatus.isCommonName": {
+                "new_name": "isCommonName0",
+                "checked": true
+            },
+            "properties.roads.0.addressedNames.0.roadName.nameStatus.isNameOnRoadSign": {
+                "new_name": "isOnRoadSign0",
+                "checked": true
+            },
+            "properties.roads.1.addressedNames.0.roadName.name": {
+                "new_name": "name1",
+                "checked": true
+            },
+            "properties.roads.1.addressedNames.0.roadName.nameStatus.isCommonName": {
+                "new_name": "isCommonName1",
+                "checked": true
+            },
+            "properties.roads.1.addressedNames.0.roadName.nameStatus.isNameOnRoadSign": {
+                "new_name": "isOnRoadSign1",
+                "checked": true
+            },
+            "properties.roads.2.addressedNames.0.roadName.name": {
+                "new_name": "name2",
+                "checked": true
+            },
+            "properties.roads.2.addressedNames.0.roadName.nameStatus.isCommonName": {
+                "new_name": "isCommonName2",
+                "checked": true
+            },
+            "properties.roads.2.addressedNames.0.roadName.nameStatus.isNameOnRoadSign": {
+                "new_name": "isOnRoadSign2",
+                "checked": true
+            }
+        },
+        "place": {},
+        "relation": {}
+    }
+}

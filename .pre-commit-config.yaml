@@ -1,0 +1,149 @@
+exclude: |
+  (?x)^(
+      docs/conf.py|
+      .*/style_set/.*\.qml|
+      .*/style_set/.*\.qqf|
+      .*/style_set/.*\.txt|
+      .*/test_here_qgis_plugin/ui/example/.*|
+      .*/resources_rc.py|
+      .*/resources.py|
+      \.git.*|
+      HERE_NOTICE|
+      \.scan-report.html
+  )$
+
+repos:
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v4.4.0
+  hooks:
+  - id: trailing-whitespace
+    exclude: |
+        (?x)^(
+            setup.cfg|
+            .*.bumpversion.cfg
+        )$
+  - id: check-added-large-files
+  - id: check-ast
+  - id: check-json
+  - id: check-merge-conflict
+  - id: check-xml
+  - id: check-yaml
+    args: ['--allow-multiple-documents']
+  - id: debug-statements
+  - id: end-of-file-fixer
+  - id: requirements-txt-fixer
+  - id: mixed-line-ending
+    args: ['--fix=auto']  # replace 'auto' with 'lf' to enforce Linux/Mac line endings or 'crlf' for Windows
+
+## If you want to automatically "modernize" your Python code:
+# - repo: https://github.com/asottile/pyupgrade
+#   rev: v3.7.0
+#   hooks:
+#   - id: pyupgrade
+#     args: ['--py37-plus']
+
+## If you want to avoid flake8 errors due to unused vars or imports:
+# - repo: https://github.com/PyCQA/autoflake
+#   rev: v2.1.1
+#   hooks:
+#   - id: autoflake
+#     args: [
+#       --in-place,
+#       --remove-all-unused-imports,
+#       --remove-unused-variables,
+#     ]
+
+- &isort
+  repo: https://github.com/PyCQA/isort
+  rev: 5.11.5
+  hooks:
+  - id: isort
+    args: [ "--profile", "black", "--filter-files" ]
+
+- &black
+  repo: https://github.com/psf/black-pre-commit-mirror
+  rev: 23.3.0
+  hooks:
+  - id: black
+    language_version: python3.9
+    args: [ -v ]
+
+## If like to embrace black styles even in the docs:
+# - repo: https://github.com/asottile/blacken-docs
+#   rev: v1.13.0
+#   hooks:
+#   - id: blacken-docs
+#     additional_dependencies: [black]
+
+- repo: https://github.com/PyCQA/flake8
+  rev: 5.0.4
+  hooks:
+  - id: flake8
+    ## You can add flake8 plugins via `additional_dependencies`:
+    additional_dependencies: [flake8-bugbear]
+
+- repo: https://github.com/PyCQA/flake8
+  rev: 5.0.4
+  hooks:
+  - id: flake8
+    alias: flake8-html
+    name: flake8-html
+    args: [--format, html, --htmldir, reports]
+    ## You can add flake8 plugins via `additional_dependencies`:
+    additional_dependencies: [flake8-bugbear, flake8-html]
+    stages: [manual]
+
+## Check for misspells in documentation files:
+# - repo: https://github.com/codespell-project/codespell
+#   rev: v2.2.5
+#   hooks:
+#   - id: codespell
+
+- repo: https://github.com/astral-sh/ruff-pre-commit
+  rev: v0.0.292  # must match test-requirements.txt
+  hooks:
+    - id: ruff
+
+- repo: https://github.com/astral-sh/ruff-pre-commit
+  rev: v0.0.292  # must match test-requirements.txt
+  hooks:
+    - id: ruff
+      alias: ruff-fix
+      args: [ --fix ]
+
+#- *isort
+#- *black
+
+- repo: https://github.com/twisted/towncrier
+  rev: 24.8.0
+  hooks:
+  - id: towncrier-check
+    args: [ --config, towncrier.toml ]
+    files: 'changelog/(?:here_qgis|here_qgis_plugin)/.*\.md$'
+
+- repo: https://github.com/RobertCraigie/pyright-python
+  rev: v1.1.330
+  hooks:
+  # - id: pyright
+  #   args: [--createstub, here_qgis,  --verbose]
+  - id: pyright
+    args: [here_qgis]
+    stages: [manual]
+
+- repo: https://github.com/pre-commit/mirrors-mypy
+  rev: 'v1.5.1'
+  hooks:
+  - id: mypy
+    alias: stubgen
+    name: stubgen
+    entry: stubgen
+    args: [-p, here_qgis, -o, typings]
+    pass_filenames: false
+    additional_dependencies: [tokenize-rt==3.2.0]
+    stages: [manual]
+  - id: mypy
+    alias: mypy-only
+    args: [--strict, --ignore-missing-imports, -p, here_qgis]
+    pass_filenames: false
+    additional_dependencies: [tokenize-rt==3.2.0]
+    stages: [manual]
