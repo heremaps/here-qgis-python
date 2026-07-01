@@ -126,10 +126,15 @@ def get_one_feature_without_geom(vlayer, sort_by_field_name: str = ""):
     return lst[0] if len(lst) else None
 
 
-def wkb_type_to_geom_type(wkb_type_str):
+def wkb_type_to_geom_type(wkb_type_str: str):
     return QgsWkbTypes.geometryDisplayString(
-        QgsWkbTypes.geometryType(getattr(Qgis.WkbType, wkb_type_str))
+        QgsWkbTypes.geometryType(geom_type_to_wkb_type(wkb_type_str))
     )
+
+
+def geom_type_to_wkb_type(geom_type: str):
+    WkbType = Qgis.WkbType if hasattr(Qgis, "WkbType") else QgsWkbTypes.Type
+    return getattr(WkbType, geom_type)
 
 
 class ExamplePostProcessor(QgsProcessingLayerPostProcessorInterface):

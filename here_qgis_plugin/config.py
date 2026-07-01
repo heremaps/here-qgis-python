@@ -28,6 +28,6 @@ USER_PLUGIN_DIR = os.path.join(USER_DIR, PLUGIN_PACKAGE_NAME)
 TMP_DIR = os.path.join(USER_PLUGIN_DIR, "tmp")
 LOG_FILE_NAME = "qgis.log"
 LOG_FILE = os.path.join(USER_PLUGIN_DIR, LOG_FILE_NAME)
-REPO_DIR = os.path.abspath(os.path.join(PLUGIN_DIR, ".."))
+LOCAL_REPO = os.getenv("HERE_QGIS_LOCAL_REPO", "")
 
 os.makedirs(TMP_DIR, exist_ok=True)

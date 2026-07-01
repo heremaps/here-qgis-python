@@ -11,7 +11,6 @@ import os
 from typing import List
 
 from qgis.core import (
-    Qgis,
     QgsCoordinateReferenceSystem,
     QgsExpression,
     QgsFeatureRequest,
@@ -26,7 +25,12 @@ from ..style_set import StyleConfig
 from .file_type import FileType
 from .get_features import get_features
 from .layer_metadata import LayerMetadata
-from .processing_utils import LayerPostProcessor, ctlg_hrn_parser, wkb_type_to_geom_type
+from .processing_utils import (
+    LayerPostProcessor,
+    ctlg_hrn_parser,
+    geom_type_to_wkb_type,
+    wkb_type_to_geom_type,
+)
 
 # default IML
 DEFAULT_IML_LAYERS = [
@@ -140,7 +144,7 @@ class GetAndLoad:
         #     uri += "|option:GEOMETRY_AS_COLLECTION=yes"
         options = QgsVectorLayer.LayerOptions()
         options.fallbackCrs = QgsCoordinateReferenceSystem("EPSG:4326")
-        options.fallbackWkbType = getattr(Qgis.WkbType, geom_type)
+        options.fallbackWkbType = geom_type_to_wkb_type(geom_type)
         iml_layer = QgsVectorLayer(uri, iml_disp_name, "ogr", options=options)
         iml_layer.setCrs(QgsCoordinateReferenceSystem("EPSG:4326"))
 

@@ -4,7 +4,7 @@
 name=HERE QGIS Plugin 
 qgisMinimumVersion=3.0
 qgisMaximumVersion=4.99
-version=2.0.16
+version=2.0.17
 author=HERE Europe B.V.
 email=here_qgis_plugin_dev_team@here.com
 
@@ -47,7 +47,7 @@ server=False
 
 supportsQt6=yes
 
-changelog=Release 2.0.16 (2026-06-30)
-  - Support different realms
-  - Rename processing function display name
-  - Prepare plugin for the public OSGEO repo
+changelog=Release 2.0.17 (2026-07-01)
+  - Support more layers for mm project
+  - Resolve vulnerability in urlopen
+  - Resolve bandit vulnerability in XML

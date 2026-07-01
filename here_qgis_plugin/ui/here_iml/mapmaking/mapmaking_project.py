@@ -15,11 +15,13 @@ from qgis.PyQt import QtWidgets, uic
 from qgis.PyQt.QtCore import Qt
 from qgis.PyQt.QtWidgets import QHeaderView, QPushButton, QTableWidgetItem
 
+from here_qgis.api.map import IMLMapApi
 from here_qgis.api.mapmaking import MapMakingAPI
 
 from ....api_factory import create_api_for_ui
 from ...utils.settings_manager import set_auth_status
 from ..error_msg import show_error_msg_box
+from ..imlmap.imlmap_popup import DEFAULT_IML_LAYERS
 from .mapmaking_popup import MapmakingPopup  # Import IMLMapPopup
 
 
@@ -36,6 +38,7 @@ class MapmakingProjectLoad(QtWidgets.QDialog):
         self.current_page = 1
         self.items_per_page = 10
         self.auth_status = False
+        self._layer_cache = {}
         # Project data
         self.get_project_data()
 
@@ -49,6 +52,27 @@ class MapmakingProjectLoad(QtWidgets.QDialog):
         self.searchLineEdit.textChanged.connect(self.update_search)
         self.prevButton.clicked.connect(self.go_to_previous_page)
         self.nextButton.clicked.connect(self.go_to_next_page)
+
+    def get_layer_ids(self, catalog_hrn, project_hrn):
+        """
+        Get layer IDs for the livemap catalog.
+        Uses cached layer IDs when available.
+        Returns API-fetched layer IDs, or default layers if the request fails.
+
+        Returns:
+            List of layer IDs.
+        """
+        if catalog_hrn in self._layer_cache:
+            return self._layer_cache[catalog_hrn]
+
+        map_api = create_api_for_ui(IMLMapApi, project_hrn)
+        try:
+            layer_ids = map_api.get_layer_ids(catalog_hrn)
+            # Store cache
+            self._layer_cache[catalog_hrn] = layer_ids
+            return layer_ids
+        except Exception:
+            return DEFAULT_IML_LAYERS
 
     def get_project_data(self):
         """Get project data from the HERE Mapmaking API."""
@@ -134,7 +158,25 @@ class MapmakingProjectLoad(QtWidgets.QDialog):
                 "margin: 5px; padding: 5px; min-height: 30px; max-height: 30px;"
             )
 
-            open_button.clicked.connect(lambda _, i=item: self.open_popup(i))
+            name = item["configuration"]["name"]
+            description = item["configuration"]["description"]
+            project_hrn = item["projectHrn"]
+            input_catalog_hrn = next(
+                r["value"]["hrn"] for r in item["resources"] if r["format"] == "input"
+            )
+            livemap_catalog_hrn = next(
+                r["value"]["hrn"] for r in item["resources"] if r["format"] == "livemap"
+            )
+
+            open_button.clicked.connect(
+                lambda _, name=name, description=description, project_hrn=project_hrn, input_catalog_hrn=input_catalog_hrn, livemap_catalog_hrn=livemap_catalog_hrn: self.open_popup(  # noqa
+                    name,
+                    description,
+                    project_hrn,
+                    input_catalog_hrn,
+                    livemap_catalog_hrn,
+                )
+            )
             self.dataTable.setCellWidget(row_idx, 5, open_button)
 
         # Adjust column widths
@@ -182,6 +224,16 @@ class MapmakingProjectLoad(QtWidgets.QDialog):
             self.current_page += 1
             self.display_data()
 
-    def open_popup(self, item):
-        popup = MapmakingPopup(item, self)
+    def open_popup(
+        self, name, description, project_hrn, input_catalog_hrn, livemap_catalog_hrn
+    ):
+        popup = MapmakingPopup(
+            self.get_layer_ids(livemap_catalog_hrn, project_hrn),
+            project_hrn,
+            livemap_catalog_hrn,
+            input_catalog_hrn,
+            name,
+            description,
+            self,
+        )
         popup.show()

@@ -10,7 +10,7 @@
 
 __author__ = "HERE Europe B.V."
 __email__ = "here_qgis_plugin_dev_team@here.com"
-__version__ = "2.0.16"
+__version__ = "2.0.17"
 __copyright__ = "Copyright (c) 2026 HERE Europe B.V."
 
 

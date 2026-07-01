@@ -69,6 +69,9 @@ profile = "black"
 
 ####### STATIC CHECKING #######
 
+[tool.bandit]
+exclude_dirs = ["tests", "here_qgis_plugin/shared/lib"]
+
 [tool.mypy]
 python_version = 3.8
 mypy_path = "typings"
@@ -109,6 +112,9 @@ mom-internal-8 = [
 ]
 
 [dependency-groups]
+bandit = [
+    "bandit[toml]>=1.7.4",
+]
 hatch = [
     "hatch>=1.15",
 ]

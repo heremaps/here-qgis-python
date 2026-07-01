@@ -14,33 +14,37 @@ from qgis.PyQt.QtCore import Qt
 from qgis.PyQt.QtWidgets import QMessageBox
 
 from ...here_qgis_processing.iml_layer_processing import iml_layer_processing
-from ..imlmap.imlmap_popup import CONTEXT, DEFAULT_IML_LAYERS, FEEDBACK, IMLMapPopup
+from ..imlmap.imlmap_popup import CONTEXT, FEEDBACK, IMLMapPopup
 from .query_build import QueryBuild
 from .query_builder import QueryBuilder
 
 
 class MapmakingPopup(IMLMapPopup):
-    def __init__(self, item, parent=None):
+    def __init__(
+        self,
+        layer_ids,
+        project_hrn,
+        livemap_catalog_hrn,
+        input_catalog_hrn,
+        name,
+        description,
+        parent=None,
+    ):
         IMLMapPopup.__init__(
             self,
-            DEFAULT_IML_LAYERS,
-            item["projectHrn"],
-            item["configuration"]["name"],
-            item["configuration"]["description"],
+            layer_ids,
+            project_hrn,
+            name,
+            description,
             parent=parent,
         )
 
         self.current_checked = ""
         self.query_builder = QueryBuilder()
         # Set data
-        self.project_hrn = item["projectHrn"]
-        self.catalog_hrn = None
-        self.input_catalog_hrn = next(
-            r["value"]["hrn"] for r in item["resources"] if r["format"] == "input"
-        )
-        self.livemap_catalog_hrn = next(
-            r["value"]["hrn"] for r in item["resources"] if r["format"] == "livemap"
-        )
+        self.project_hrn = project_hrn
+        self.livemap_catalog_hrn = livemap_catalog_hrn
+        self.input_catalog_hrn = input_catalog_hrn
         self.text_query.selectionChanged.connect(self.check_if_is_editable)
         self.filter_button.clicked.connect(self.show_query_builder)
 

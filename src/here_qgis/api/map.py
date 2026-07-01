@@ -185,3 +185,20 @@ class IMLMapApi(API):
 
         except Exception as e:
             raise APIResponseError(f"Error fetching layer name: {e}")
+
+    def get_layer_ids(self, catalogHrn: str) -> List[str]:
+        """
+        Fetch layer IDs for the given catalog HRN.
+        Args:
+            catalog_hrn: Catalog HRN identifier
+        Returns:
+            List of layer IDs (empty list if no layers found)
+        """
+        url = f"https://config.data.api.platform.here.com/config/v1/maps/{catalogHrn}"
+
+        try:
+            response = self._send_request_with_project_scope("GET", url)
+            data = response.json()
+            return [layer["id"] for layer in data.get("layers", [])]
+        except Exception as e:
+            raise APIResponseError(f"Error fetching layer IDs: {e}")
